@@ -53,7 +53,7 @@ export default function Home() {
                   />
                 </a>
                 <p className="text-xs">
-                  Schedule 4/10/2023
+                  Schedule 6/02/2024
                 </p>
               </div>
             </div>
