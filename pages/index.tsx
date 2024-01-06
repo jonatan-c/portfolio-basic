@@ -15,7 +15,7 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center w-[80%] mx-auto">
             <h1 className="pt-24 font-extrabold text-4xl lg:text-6xl">Jonatan Claros</h1>
             <div className="py-6 font-normal text-2xl text-center lg:text-center">
-              Full stack developer  + 2 years of experience | React | Node | 1X AWS
+              Full stack developer  + 3 years of experience | React | Node | 1X AWS
             </div>
             <div className="py-6 font-normal text-2xl text-center lg:text-center">
               Indie creator | Solving problems with code
