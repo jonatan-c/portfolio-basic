@@ -7,10 +7,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
        <Script
-          strategy="afterInteractive"
+         
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
-        <Script strategy="afterInteractive" id="google-analytics">
+        <Script id="google-analytics">
           {`
 							window.dataLayer = window.dataLayer || [];
 							function gtag(){dataLayer.push(arguments);}
