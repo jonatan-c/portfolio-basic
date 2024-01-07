@@ -15,7 +15,7 @@ export const MainLayout = ({ children }: Props): any => {
         <title>Jonatan Claros</title>
         <meta name="description" content="portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Script
+        {/* <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
@@ -27,7 +27,7 @@ export const MainLayout = ({ children }: Props): any => {
 					
 							gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
 			`}
-        </Script>
+        </Script> */}
         {/* <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
