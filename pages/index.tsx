@@ -4,24 +4,46 @@ import { MainLayout } from "@/components/layouts/MainLayout";
 import Skills from "@/components/Skills";
 import awsImageBudget from "@/public/aws-certified-cloud-practitioner.png";
 import linkedinIcon from "@/public/linkedin-icon.png";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+  
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}',{
+          page_path: window.location.pathname,
+        });
+        `,
+          }}
+        />
+      </Head>
       <MainLayout>
         <div className="relative min-h-screen bg-[#212121] text-[#ededed]">
           <div className="flex flex-col justify-center items-center w-[80%] mx-auto">
-            <h1 className="pt-24 font-extrabold text-4xl lg:text-6xl">Jonatan Claros</h1>
+            <h1 className="pt-24 font-extrabold text-4xl lg:text-6xl">
+              Jonatan Claros
+            </h1>
             <div className="py-6 font-normal text-2xl text-center lg:text-center">
-              Full stack developer  + 3 years of experience | React | Node | Nextjs | Nestjs | Typescript | 1X AWS
+              Full stack developer + 3 years of experience | React | Node |
+              Nextjs | Nestjs | Typescript | 1X AWS
             </div>
             <div className="py-6 font-normal text-2xl text-center lg:text-center">
-              Indie creator | Solving problems with code 
+              Indie creator | Solving problems with code
             </div>
-
-
             Certifications
             <div className="pb-4 mb-10 flex flex-row mt-6">
               <div>
@@ -39,7 +61,6 @@ export default function Home() {
                 </a>
               </div>
               <div className="opacity-30">
-
                 <a
                 // href=""
                 // target="_blank"
@@ -52,15 +73,10 @@ export default function Home() {
                     className="hover:opacity-50 cursor-not-allowed"
                   />
                 </a>
-                <p className="text-xs">
-                  Schedule 6/02/2024
-                </p>
+                <p className="text-xs">Schedule 6/02/2024</p>
               </div>
             </div>
-
             <Skills />
-
-
             <div className="footer">
               <p className="text-center">Contact</p>
               <a
