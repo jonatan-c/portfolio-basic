@@ -15,8 +15,11 @@ export const MainLayout = ({ children }: Props): any => {
         <title>Jonatan Claros</title>
         <meta name="description" content="portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-        <Script id="google-analytics">
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+        <Script strategy="afterInteractive" id="google-analytics">
           {`
 							window.dataLayer = window.dataLayer || [];
 							function gtag(){dataLayer.push(arguments);}
